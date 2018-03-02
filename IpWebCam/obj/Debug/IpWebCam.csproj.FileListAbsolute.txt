@@ -1,0 +1,16 @@
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\IpWebCam.exe.config
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\IpWebCam.exe
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\IpWebCam.pdb
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\Interop.WMPLib.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.csprojResolveAssemblyReference.cache
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\Interop.WMPLib.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.csproj.ResolveComReference.cache
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.Form1.resources
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.Properties.Resources.resources
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.csproj.GenerateResource.Cache
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.csproj.CoreCompileInputs.cache
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.exe
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.pdb
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\MjpegProcessor.dll
