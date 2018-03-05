@@ -10,19 +10,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MjpegProcessor;
+using MetroFramework;
+using MetroFramework.Forms;
+
 namespace IpWebCam
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroForm
     {
         MjpegDecoder mjpeg;
         String ipAddress;
         SoundPlayer sound;
-        
+        bool flash = false;
+
+        void FocusCam()
+        {
+            HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(ipAddress + "/focus");
+            wr.GetResponse().Close();
+        }
+
         public Form1()
         {
             InitializeComponent();
             mjpeg = new MjpegDecoder();
             mjpeg.FrameReady += frameReady;
+            
         }
 
         private void frameReady(object sender, FrameReadyEventArgs e)
@@ -35,26 +46,52 @@ namespace IpWebCam
         {
             ipAddress = "http://" + ipTextBox.Text.ToString();
             mjpeg.ParseStream(new Uri(ipAddress + "/videofeed"));
-            sound = new SoundPlayer();
             
+            sound = new SoundPlayer();
+            outputBox.Visible = true;
+            HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(ipAddress + "/disabletorch");
+            wr.GetResponse().Close();
+            metroToggle1.Checked = false;
+            Focus();
+
         }
 
         private void disButton_Click(object sender, EventArgs e)
         {
             mjpeg.StopStream();
+            outputBox.Visible = false;
+            ipAddress = null;
+          
         }
 
-        private void button1_Click  (object sender, EventArgs e)
+       
+
+        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
-            HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(ipAddress + "/enabletorch");
-            wr.GetResponse().Close();
+            try
+            {
+                if (flash)
+                {
+                    HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(ipAddress + "/disabletorch");
+                    wr.GetResponse().Close();
+                    flash = false;
+                    metroToggle1.Checked = false;
+                }
+                else
+                {
+                    HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(ipAddress + "/enabletorch");
+                    wr.GetResponse().Close();
+                    flash = true;
+                    metroToggle1.Checked = true;
+                }
+                Focus();
+            }
+            catch(Exception ex)
+            {
+                MetroMessageBox.Show(this, "You are not connected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+            }
            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(ipAddress + "/disabletorch");
-            wr.GetResponse().Close();
         }
     }
 }

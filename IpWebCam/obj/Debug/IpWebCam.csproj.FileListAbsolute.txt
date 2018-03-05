@@ -14,3 +14,6 @@ C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.csproj.CoreCompi
 C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.exe
 C:\Users\Home\source\repos\IpWebCam\IpWebCam\obj\Debug\IpWebCam.pdb
 C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\MjpegProcessor.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\MetroFramework.Design.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\MetroFramework.dll
+C:\Users\Home\source\repos\IpWebCam\IpWebCam\bin\Debug\MetroFramework.Fonts.dll
